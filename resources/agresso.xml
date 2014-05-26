@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ABWInvoice Version="542">
+	<Invoice>
+		<InvoiceNo>40064936</InvoiceNo>
+		<Header>
+			<InvoiceDate>2011-11-01</InvoiceDate>
+			<DueDate>2011-11-21</DueDate>
+			<OrderRef>Ekstern ref</OrderRef>
+			<OrderNo>2</OrderNo>
+			<OrderDate>2011-11-01</OrderDate>
+			<HeaderText>November 2011. Topptekst</HeaderText>
+			<FooterText>Bunntekst</FooterText>
+			<Text1>BBSEFAKTTEST</Text1>
+			<Text2>1101125</Text2>
+			<Currency>NOK</Currency>
+			<PayTerms>20</PayTerms>
+			<PayTermsDescr>Netto pr 20 dager</PayTermsDescr>
+			<PayMethod>IP</PayMethod>
+			<PayMethodDescr>Interpay</PayMethodDescr>
+			<Seller>
+				<Name>Froland kommune</Name>
+				<AddressInfo>
+					<Address>Osedalen</Address>
+					<Place>FROLAND</Place>
+					<ZipCode>4820</ZipCode>
+					<Country>Norge</Country>
+					<Phone>37235500</Phone>
+				</AddressInfo>
+				<CompRegNo>00946439045</CompRegNo>
+				<VatRegNo>946 439 045 MVA</VatRegNo>
+				<SellerNo>1</SellerNo>
+				<Contact>Ergogroup -Knut Dæhlen</Contact>
+			</Seller>
+			<Buyer>
+				<Name>Nils Nilsen</Name>
+				<AddressInfo>
+					<Address>Nilsensgata 100</Address>
+					<Place>BJØRKELANGEN</Place>
+					<ZipCode>1940</ZipCode>
+					<Country>Norge</Country>
+				</AddressInfo>
+				<CompRegNo>19901</CompRegNo>
+				<BuyerNo>19901</BuyerNo>
+				<ExtOrderRef>Ekstern ref</ExtOrderRef>
+				<Accountable>Bestiller</Accountable>
+			</Buyer>
+			<DeliveryInfo>
+				<DelivDate>2011-11-01</DelivDate>
+				<DelivDateDescr>01.11.2011</DelivDateDescr>
+				<DelivTerms>KLT</DelivTerms>
+				<DelivTermsDescr>kommunalt levert tjeneste</DelivTermsDescr>
+				<DelivMethod>KLT</DelivMethod>
+				<DelivMethodDescr>kommunalt levert tjeneste</DelivMethodDescr>
+			</DeliveryInfo>
+			<ShipTo>
+				<Name>Nils Nilsen</Name>
+				<AddressInfo>
+					<Address>Nilsensgata 100</Address>
+					<Place>BJØRKELANGEN</Place>
+					<ZipCode>1940</ZipCode>
+					<Country>Norge</Country>
+				</AddressInfo>
+			</ShipTo>
+			<BillTo>
+				<Name>Nils Nilsen</Name>
+				<AddressInfo>
+					<Address>Nilsensgata 100</Address>
+					<Place>BJØRKELANGEN</Place>
+					<ZipCode>1940</ZipCode>
+					<Country>Norge</Country>
+				</AddressInfo>
+			</BillTo>
+			<PaymentInfo>
+				<BankCode>SPBSOR2</BankCode>
+				<BankName>Sparebanken Sør</BankName>
+				<AccountNumber>29040701786</AccountNumber>
+				<AccountName>Sparebanken Sør</AccountName>
+				<BacsId>11990140064936431</BacsId>
+			</PaymentInfo>
+			<ReferenceCode>
+				<Code>DR</Code>
+				<Value>43</Value>
+			</ReferenceCode>
+			<ReferenceCode>
+				<Code>DY</Code>
+			</ReferenceCode>
+			<Bespoke>
+				<FreeText>3;Etter forfall beregnes forsinkelsesrente etter gjeldende satser. Ved betalingsvarsel påløper gebyr.</FreeText>
+			</Bespoke>
+			<Bespoke>
+				<FreeText>6;2</FreeText>
+			</Bespoke>
+		</Header>
+		<Details>
+			<Detail>
+				<LineNo>1</LineNo>
+				<DiscountPct>0.00</DiscountPct>
+				<Discount>0.00</Discount>
+				<LineTotExclTax>630.00</LineTotExclTax>
+				<TaxPercent>0.00</TaxPercent>
+				<TaxAmount>0.00</TaxAmount>
+				<LineTotInclTax>630.00</LineTotInclTax>
+				<Products>
+					<SellerProductCode>90611</SellerProductCode>
+					<SellerProductDescr>Frolandshallen trening 1/1 hall</SellerProductDescr>
+					<UnitCode>T</UnitCode>
+					<UnitDescr>Time</UnitDescr>
+					<Quantity>2.00</Quantity>
+					<Price>315.00</Price>
+					<ProductSpecification>
+						<SeqNo>1</SeqNo>
+						<Info>Spesifiseringslinje til artikkelinje 1. Linje 1 av 2</Info>
+					</ProductSpecification>
+					<ProductSpecification>
+						<SeqNo>2</SeqNo>
+						<Info>Spesifiseringslinje til artikkelinje 1. Linje 2 av 2</Info>
+					</ProductSpecification>
+				</Products>
+			</Detail>
+			<Detail>
+				<LineNo>2</LineNo>
+				<DiscountPct>0.00</DiscountPct>
+				<Discount>0.00</Discount>
+				<LineTotExclTax>300.00</LineTotExclTax>
+				<TaxPercent>0.00</TaxPercent>
+				<TaxAmount>0.00</TaxAmount>
+				<LineTotInclTax>300.00</LineTotInclTax>
+				<Products>
+					<SellerProductCode>90311</SellerProductCode>
+					<SellerProductDescr>Nidarhall hele huset</SellerProductDescr>
+					<UnitCode>STK</UnitCode>
+					<UnitDescr>Stykker</UnitDescr>
+					<Quantity>2.00</Quantity>
+					<Price>150.00</Price>
+					<ProductSpecification>
+						<SeqNo>1</SeqNo>
+						<Info>Tekstlinje til artkkellinje 2. Linje 1 av 1.</Info>
+					</ProductSpecification>
+				</Products>
+			</Detail>
+		</Details>
+		<Summary>
+			<TotalExclTax>930.00</TotalExclTax>
+			<TotalTax>0.00</TotalTax>
+			<InvDiscPct>0.00</InvDiscPct>
+			<InvDiscAmount>0.00</InvDiscAmount>
+			<TotalInclTax>930.00</TotalInclTax>
+		</Summary>
+	</Invoice>
+</ABWInvoice>

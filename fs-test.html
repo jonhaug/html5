@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <title>My HTML5</title>
+
+  <link rel="stylesheet" type="text/css" href="fs-test.css"></link>
+  <script type="text/javascript" src="jquery-2.0.3.js"></script>
+
+  </head>
+  <body>
+
+    <h1>Testing html5</h1>
+    <a href="file:///c:/workspace/local">Filer</a>
+    <div id='jontest'></div><hr>
+
+    <p>
+      <input type="file" id="files" name="files[]" multiple />
+      <hr>
+      <output id="list"></output>
+    </p>
+
+    <script type="text/javascript" src="fs-test.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        console.log("It works...");
+        $('tr').mouseover(function() { console.log('jon');this.style.backgroundColor='#fff66';})
+               .mouseout(function() { this.style.backgroundColor='#d4e3e5';});
+      })();
+    </script>
+  </body>
+</html>
