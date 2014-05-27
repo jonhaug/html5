@@ -7,12 +7,14 @@ function domFile(file) {
   tr.append($('<td>').append(file.size));
   tr.append($('<td>').append(file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() : 'n/a'));
   tr.append($('<td>'));
+  tr.append($('<td>'));
   return tr;
 }
 
 
 function domAllFiles(files) {
-  var table = $('<table id="result_table" class="hovertable"><tr><th>File name</th><th>File type</th><th>Bytes</th><th>Last modified</th><th>Content</th></tr></table>');
+  var table = $('<table id="result_table" class="hovertable"><tr><th>File name</th><th>File type</th><th>Bytes</th>' +
+                '<th>Last modified</th><th>Md5sum</th><th>Content</th></tr></table>');
   for (var i = 0, f; f = files[i]; i++) {
     var tr = domFile(f);
     table.append(tr);
@@ -29,13 +31,13 @@ function handleFileSelect(evt) {
   var table = domAllFiles(files);
   $('#list').append(table);
   $('tr').mouseover(function() { $(this).removeClass('nohover').addClass('hover');})
-    .mouseout(function() {  $(this).removeClass('hover').addClass('nohover');});
-    // .click(function() {
-    //   var file = $(this).data('file');
-    //   var name = $(this).children().first().text();
-    //   console.log(name);
-    //   analyze(file, $(this).children().last());
-    // });
+    .mouseout(function() {  $(this).removeClass('hover').addClass('nohover');})
+     .click(function() {
+       var file = $(this).data('file');
+       var name = $(this).children().first().text();
+       console.log(name);
+       mymd5sum(file, $(this).children().eq(-2));
+     });
 
   setTimeout(function() {$('#result_table tbody tr').each(function() {
     var file = $(this).data('file');
@@ -150,4 +152,23 @@ function isE2B(byteArray) {
 
 function isEHF(byteArray) {
     return byteArray.match(/<(Invoice|CreditNote).*xmlns=["']urn:oasis:names:specification:ubl:schema:xsd:(Invoice|CreditNote)-2["']/) ? 'EHF' : null;
+}
+
+// ==================================================================================
+
+function mymd5sum(file, dom) {
+  dom.html(file.name);
+  var start = new Date().getTime();
+  var reader = new FileReader();
+  reader.onload = (function(f) {
+    return function(e) {
+      var contents = e.target.result;
+      cc=contents;
+      var md5sum = md5(contents);
+      var end = new Date().getTime();
+
+      dom.html(md5sum + '<br>' + (end-start) + ' ms');
+    };
+  })(file);
+  reader.readAsBinaryString(file);
 }
