@@ -1,53 +1,134 @@
-<html>
-  <head><title>Hytte på saltfjellet</title></head>
-  <meta charset="UTF-8"></meta>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-    <link rel="stylesheet" href="css/bootstrap.css"></link>
-    <style type="text/css">
-    </style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <meta charset="utf-8"></meta>
+    <title>Saltfjellhytte til salgs</title>
 
-  <body><h1>Hytte på saltfjellet selges</h1>
-    <p>Eldre hytte beliggende mellom Lønsdal og Sørelva med tomt selges.</p>
-    <div>
-      <h3>Bilder</h3>
-      <img src="saltfjellet-matrikkel.png"></img>
-    </div>
-    <h3>Spesifikasjon</h3>
-    <dl class="dl-horizontal">
-      <dt>Adresse</dt><dd>Lønsdal, 8255 RØKLAND</dd>
-      <dt>Eiendom</dt>
-      <dd>Matrikkel 76/25, Saltdal. <a href='http://www.seeiendom.no/services/Matrikkel.svc/GetDetailPage?type=property&knr=1840&gnr=76&bnr=25&fnr=0&snr=0&showpwm=true&customer=kartverket&pagename='>Se eiendom</a></dd>
-      <dt>Hjemmelshaver</dt><dd>Marie Haugsand, Bodø</dd>
-      <dt>Bruksareal/P-rom</dt>
-      <dd>60 kvm</dd>
-      <dt>Tomt</dt><dd>996 kvm eiet tomt.</dd>
-      <dt>Vann</dt><dd>Smelting av snø om vinteren, bekk 50 meter unna vår, sommer og høst. Gode muligheter for boring
-      etter egen brønn. (Morenegrunn)</dd>
-      <dt>Strøm</dt><dd>Solcelleanlegg, men tilknytningpunkt for strømkobling er 100 m unna.</dd>
-      <dt>Tilstand</dt><dd>Trenger renovering, men er fullt ut beboelig.</dd>
-      <dt>Antall rom</dt><dd>5</dd>
-      <dt>Bad</dt><dd>Lite avlukke med enkel dusj.</dd>
-      <dt>Kjøkken</dt><dd>Ja, med gammeldags vedkomfyr og propankoker</dd>
-      <dt>Oppvarming</dt><dd>Parafinovn og vedovn</dd>
-      <dt>Toalett</dt><dd>Stort utedo</dd>
-      <dt>Annet</dt><dd>Vedskjul/redskapsbod</dd>
-      <dt>Bilvei</dt><dd>Parkering 40 meter unna, men når snøfritt kan man med en 4wd kan man kjøre helt frem.</dd>
-      <dt>Kart</dt><dd><a href="http://www.norgeibilder.no/?zoom=18&lat=7414927.85649&lon=784836.70899&srs=EPSG:32632">Kart</a>
-        <a href='http://kart.finn.no/?lng=15.46442&lat=66.71864&zoom=19&mapType=norhybrid'>Hybridkart</a>
-      <a href="http://kart.finn.no/?lng=15.46420&lat=66.71861&tab=feedback&zoom=19&mapType=normap&activetab=feedback">Rent kart</a></dd>
-    </dl>
+    <!--
+        TODO:
 
-    <div>
-      <a href="http://kart.finn.no?lng=15.46514902092&lat=66.718729799359&zoom=12&mapType=normap&WT.mc_id=hp_map_cb&showPin=true"><img border="0" title="Klikk for st&oslash;rre kart" src="http://kart.finn.no/map/image?lat=66.71873&lng=15.46515&mapType=&height=250&width=250&zoom=12&title=&showPin=on&key=a1049b2577b71d1fb23ee8db2ae3efc2"></a>
-    </div>
-    <h3>Kontakt</h3>
-    <ul>
-      <li>Bjørn Haugsand</li>
-      <li>Jon Haugsand +4745003994</li>
-    </ul>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.js"></script>  </body>
+        (1) Add title
+
+        (2) Split into sections: images, specification, contact, links
+
+        (3) Add specification with proper size and layout.
+      -->
+
+    <link href="css/bootstrap.css" rel="stylesheet"></link>
+    <link href="css/bootstrap-theme.css" rel="stylesheet"></link>
+    <link href="css/annonse.css" rel="stylesheet"></link>
+
+    <body role="document">
+
+      <div class="container" role="main">
+        <div class='jumbotron'>
+        <h1>Hytte på Saltfjellet til salgs</h1>
+        <p>Enkel hytte med selveiet tomt sentralt plassert mellom Lønsdal stasjon og Sørelva selges.</p>
+        <div>
+          <a href='http://kart.finn.no/?lng=15.45930&lat=66.71938&tab=feedback&zoom=12&mapType=normap&markers=15.46516,66.71875,r,Brukerdefinert&activetab=feedback'>
+            <img src='resources/saltfjellet-smaller.png' class='img-responsive'></img>
+            <div class='cation'>Klikk på bildet for større kart</div></a></div>
+        </div>
+
+
+
+        <div class='page-header'>
+          <h2>Kart</h2>
+        </div>
+        <p>... kart ...</p>
+
+
+        <div class='page-header'>
+          <h2>Bilder</h2>
+        </div>
+        <div class='row'>
+          <div class='col-xs-3'>
+            <a href='resources/floor-plan.svg'><img class='img-responsive' max-width='100px'
+                                                    src='resources/floor-plan.png'></img></a>
+          </div>
+          <div class='col-xs-3'>
+            <a href='resources/hytte-gammel.jpg'><img class='img-responsive' max-width='100px' src='resources/hytte-gammel.jpg'></img></a>
+          </div>
+          <div class='col-xs-3'>
+            <a href='resources/norgebilder-ovenfra.jpg'><img class='img-responsive' max-width='100px' src='resources/norgebilder-ovenfra.jpg'></img></a>
+          </div>
+          <div class='col-xs-3'>
+            <a href='resources/profil.jpg'><img class='img-responsive' src='resources/profil.jpg'></img></a>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-xs-3'>
+            <a href='resources/skogsglimpse.jpg'><img class='img-responsive' src='resources/skogsglimpse.jpg'></img></a>
+          </div>
+        </div>
+
+
+
+        <div class='page-header'>
+          <h2>Detaljer</h2>
+        </div>
+
+        <!-- <div class="panel col-md-4 annonse">test</div> -->
+        <dl class="dl-horizontal">
+          <dt>Adresse</dt><dd>Lønsdal, 8255 RØKLAND</dd>
+          <dt>Eiendom</dt>
+          <dd>Matrikkel 76/25, Saltdal.</dd>
+          <dt>Hjemmelshaver</dt><dd>Marie Haugsand, Bodø</dd>
+          <dt>Bruksareal/P-rom</dt>
+          <dd>60 kvm</dd>
+          <dt>Bruttoareal</dt><dd>80 kvm</dd>
+          <dt>Tomt</dt><dd>996 kvm eiet tomt.</dd>
+          <dt>Vann</dt><dd>Smelting av snø om vinteren, bekk 50 meter unna vår, sommer og høst. Gode muligheter for boring
+            etter egen brønn. (Morenegrunn)</dd>
+          <dt>Strøm</dt><dd>Solcelleanlegg, men tilknytningpunkt for strømkobling er 100 m unna.</dd>
+          <dt>Tilstand</dt><dd>Trenger renovering, men er fullt ut beboelig.</dd>
+          <dt>Antall rom</dt><dd>5</dd>
+          <dt>Soveplasser</dt><dd>Ca 10</dd>
+          <dt>Bad</dt><dd>Lite avlukke med enkel dusj.</dd>
+          <dt>Kjøkken</dt><dd>Stort med:
+            <ul>
+              <li>Stor gammel vedkomfyr</li>
+              <li>Propankoker</li>
+              <li>Propankjøleskap, merke <em>Sibir</em></li>
+            </ul></dd>
+          <dt>Oppvarming</dt><dd>Parafinovn og vedovn</dd>
+          <dt>Toalett</dt><dd>Stort utedo</dd>
+          <dt>Annet</dt><dd>Vedskjul/redskapsbod</dd>
+          <dt>Bilvei</dt><dd>Parkering 80 meter unna, men når snøfritt kan man kjøre helt frem.</dd>
+          <dt>Kart</dt><dd><a href="http://www.norgeibilder.no/?zoom=18&lat=7414813.06731&lon=784727.70472&srs=EPSG:32632">Kart</a>
+            <a href='http://kart.finn.no/?lng=15.46442&lat=66.71864&zoom=19&mapType=norhybrid'>Hybridkart</a>
+            <a href="http://kart.finn.no/?lng=15.46420&lat=66.71861&tab=feedback&zoom=19&mapType=normap&activetab=feedback">Rent kart</a></dd>
+        </dl>
+
+
+        <div class='page-header'>
+          <h2>Referanser</h2>
+        </div>
+        <ul>
+          <li><a href='http://www.seeiendom.no/services/Matrikkel.svc/GetDetailPage?type=property&knr=1840&gnr=76&bnr=25&fnr=0&snr=0&showpwm=true&customer=kartverket&pagename='>Matrikkel
+          76/25</a></li>
+          <li><a href="resources/old-fact-50.jpg">Tidligere takstdokument</a></li>
+          <li><a href="resources/statskog-50.jpg">Dokument fra Statskog</a></li>
+          <li><a href="resources/egenerklering-50.jpg">Egenerklæring</a></li>
+        </ul>
+
+        <div class='page-header'>
+          <h2>Kontakt</h2>
+        </div>
+        <ul>
+          <li>URL: <a href='http://haugsand.no/saltfjellet/hytte.html'>http://haugsand.no/saltfjellet/hytte.html</a></li>
+      <li>Bjørn Haugsand, e-post: <a href='mailto:bjorn.haugsand@gmail.com'>bjorn.haugsand@gmail.com</a></li>
+      <li>Jon Haugsand, e-post: <a href='mailto:jon.haugsand@gmail.com'>jon.haugsand@gmail.com</a>, tlf: +4745003994</li>
+        </ul>
+
+
+      </div> <!-- /container -->
+
+
+
+      <script src="./js/jquery-1.11.1.js"></script>
+      <script src="./js/bootstrap.js"></script>
+
+    </body>
 </html>
