@@ -37,6 +37,8 @@ http.createServer(function(request, response) {
           contentType="application/javascript";
         } else if (endsWith(filename, '.css')) {
           contentType="text/css";
+        } else if (endsWith(filename, '.jpg') || endsWith(filename, '.png')) {
+          contentType="image/jpeg";
         }
         response.writeHead(200, {"Content-Type": contentType});
         response.write(file, "binary");
