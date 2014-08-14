@@ -7,3 +7,16 @@
     background-color: yellow;
 }
 
+body {
+    padding-top: 50px;
+}
+
+.myheader {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+
+img {
+    max-width: 50%;
+}
