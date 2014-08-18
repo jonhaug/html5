@@ -42,17 +42,34 @@
         <div class='page-header'>
           <h2>Bilder</h2>
         </div>
-	<div class="goright"><button type="button" class="btn btn-primary btn-sm" id="showImg">Se store bilder</button></div>
-        <div>Invetaret følger ikke nødvendigvis med. Klikk på bildene for å laste ned et større bilde.</div>
+	<div class="goright">
+          <button type="button" class="btn btn-primary btn-sm" id="showImg">
+            Se store bilder
+          </button>
+          <button type="button" class="hide btn btn-primary btn-sm" id="hideImg">
+            Fjern store bilder
+          </button>
+        </div>
+        <div id="karusell" class='row hide mykarusell'>
+          <div class='col-xs-1'>
+            <button type="button" class="btn btn-primary btn-sm" id="showPrev">Forrige</button>
+          </div>
+          <div id="storeBilder" class='col-xs-10'></div>
+          <div class='col-xs-1'>
+            <button type="button" class="btn btn-primary btn-sm" id="showNext">Neste</button>
+          </div>
+          <hr>
+        </div>
+        <div>Klikk på bildene nedenfor for å laste ned et større bilde.</div>
         <div class='row'>
+          <div class='col-xs-3'>
+            <a href='resources//map-area-marks.svg'><img class='img-responsive myimg' src='resources/map-area-marks.svg'></img></a>
+          </div>
           <div class='col-xs-3'>
             <a href='resources/floor-plan.svg'>
 	      <img class='img-responsive myimg'
-                   src='resources/floor-plan.png' alt="Plantegning, ikke helt nøyaktig."></img>
+                   src='resources/floor-plan.svg' alt="Plantegning, ikke helt nøyaktig."></img>
 	    </a>
-          </div>
-          <div class='col-xs-3'>
-            <a href='resources/norgebilder-ovenfra.jpg'><img class='img-responsive myimg' max-width='100px' src='resources/norgebilder-ovenfra.jpg'></img></a>
           </div>
           <div class='col-xs-3'>
             <a href='resources/profil.jpg'><img class='img-responsive myimg' src='resources/profil.jpg'></img></a>
@@ -146,11 +163,13 @@
             </ul></dd>
           <dt>Oppvarming</dt><dd>Parafinovn og vedkomfyr</dd>
           <dt>Toalett</dt><dd>Stort utedo</dd>
-          <dt>Annet</dt><dd>Vedskjul/redskapsbod</dd>
+          <dt>Annet</dt><dd>Vedskjul, redskapsbod noe inventar</dd>
           <dt>Bilvei</dt><dd>Parkering 80 meter unna, men når snøfritt kan man kjøre helt frem.</dd>
-          <dt>Kart</dt><dd><a href="http://www.norgeibilder.no/?zoom=18&lat=7414813.06731&lon=784727.70472&srs=EPSG:32632">Kart</a>
-            <a href='http://kart.finn.no/?lng=15.46442&lat=66.71864&zoom=19&mapType=norhybrid'>Hybridkart</a>
-            <a href="http://kart.finn.no/?lng=15.46420&lat=66.71861&tab=feedback&zoom=19&mapType=normap&activetab=feedback">Rent kart</a></dd>
+          <dt>Kart</dt><dd><a href="http://www.norgeibilder.no/?zoom=18&lat=7414813.06731&lon=784727.70472&srs=EPSG:32632">Norge
+          i bilder</a>
+            <a href='http://kart.finn.no/?lng=15.46442&lat=66.71864&zoom=19&mapType=norhybrid'>Hybrid (Finn.no)</a>
+            <a href="http://kart.finn.no/?lng=15.46420&lat=66.71861&tab=feedback&zoom=19&mapType=normap&activetab=feedback">Rent
+            kart (Finn.no)</a></dd>
         </dl>
 
 
@@ -184,9 +203,29 @@
 
       <script type="text/javascript">
 	$('#showImg').click(function() {
-	  for (i in $('img.myimg')) {
-	    console.log(i);
-	  }
+          var images=$('img.myimg').clone();
+          var current=0;
+          $('#storeBilder').html(images.get(0));
+          $('#showImg').addClass('hide');
+          $('#hideImg').removeClass('hide');
+          $('#karusell').removeClass('hide');
+          $('#showNext').click(function() {
+            current++; if (current == images.length) current=0;
+            $('#storeBilder').html(images.get(current));
+          });
+          $('#showPrev').click(function() {
+            if (current == 0) current=images.length;
+            current--;
+            $('#storeBilder').html(images.get(current));
+          });
+          $('#hideImg').click(function() {
+            $('#hideImg').addClass('hide');
+            $('#showImg').removeClass('hide');
+            $('#karusell').addClass('hide');
+            $('#showPrev').off('click');
+            $('#showNext').off('click');
+            $('#hideImg').off('click');
+          });
 	});
       </script>
     </body>
