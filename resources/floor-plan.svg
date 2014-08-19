@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="841.82482"
-     inkscape:cy="1744.5335"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="2767.1756"
+     inkscape:cy="1504.1172"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      showgrid="true"
      inkscape:snap-global="false"
      objecttolerance="20"
@@ -1221,8 +1221,8 @@
     <path
        inkscape:connector-curvature="0"
        id="path8972"
-       d="m 2578.5485,3.2823 0,-310.11677"
-       style="fill:none;stroke:#110707;stroke-width:7.08661413;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 2573.4977,-266.7177 0,-310.11677"
+       style="fill:none;stroke:#110707;stroke-width:11.03656292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        sodipodi:nodetypes="cc" />
   </g>
 </svg>
