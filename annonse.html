@@ -28,8 +28,8 @@
 
       -->
 
-    <link href="css/bootstrap.css" rel="stylesheet"></link>
-    <link href="css/bootstrap-theme.css" rel="stylesheet"></link>
+    <link href="css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet"></link>
     <link href="css/local-style.css" rel="stylesheet"></link>
 
     <body role="document">
@@ -44,52 +44,37 @@
             <div class='cation'>Klikk på bildet for større kart</div></a></div>
         </div>
 
-	<div>
-	  Hytta ligger ca 13 mil fra Bodø i et attraktivt tur- og jaktterreng. Tyttebær og multer i gangavstand, samt
-	  fiskevann kilometere unna. Den ligger rett ved Sørelva og andre skiløyper. Bilvei helt frem. Det er enkel
-	  standard, men muligheter for vann- og strømtilkobling.
+	<div class="lead">
+	  Selveid hytte med selveid tomt, som ligger 13 mil fra Bodø i et attraktivt tur- og jaktterreng. Tyttebær og
+	  multer i gangavstand, samt kort avstand til fiskevann. Skiløyper rett utenfor døra, f.eks to kilometer til
+	  Sørelva og enda kortere til foten av Kjemåga. Bilvei helt frem sommerstid, og parkering 80 meter om
+	  vinteren. Det er enkel standard, men muligheter for å investere i vann- og strømtilkobling.
 	</div>
 
-
-        <div class='page-header'>
-          <h2>Kart</h2>
-        </div>
-        <ul>
-          <li><a href="http://www.norgeibilder.no/?zoom=18&lat=7414813.06731&lon=784727.70472&srs=EPSG:32632">Norge
-          i bilder</a></li>
-          <li>
-            <a href='http://kart.finn.no/?lng=15.46442&lat=66.71864&zoom=19&mapType=norhybrid'>Hybrid (Finn.no)</a>
-          </li>
-          <li>
-            <a href="http://kart.finn.no/?lng=15.46420&lat=66.71861&tab=feedback&zoom=19&mapType=normap&activetab=feedback">Rent
-            kart (Finn.no)</a>
-          </li>
-
-        </ul>
 
 
         <div class='page-header'>
           <h2>Bilder</h2>
         </div>
-	<div class="goright">
-          <button type="button" class="btn btn-primary btn-sm" id="showImg">
+	<div class="text-center">
+          <button type="button" class="btn btn-primary" id="showImg">
             Se store bilder
           </button>
-          <button type="button" class="hide btn btn-primary btn-sm" id="hideImg">
+          <button type="button" class="hide btn btn-primary" id="hideImg">
             Fjern store bilder
           </button>
         </div>
         <div id="karusell" class='row hide mykarusell'>
           <div class='col-xs-1'>
-            <button type="button" class="btn btn-primary btn-sm" id="showPrev">Forrige</button>
+            <button type="button" class="btn btn-primary" id="showPrev">Forrige</button>
           </div>
           <div id="storeBilder" class='col-xs-10'></div>
           <div class='col-xs-1'>
-            <button type="button" class="btn btn-primary btn-sm" id="showNext">Neste</button>
+            <button type="button" class="btn btn-primary" id="showNext">Neste</button>
           </div>
           <hr>
         </div>
-        <div>Klikk på bildene nedenfor for å laste ned et større bilde.</div>
+        <div style='padding-top:1ex;'>Eller klikk på et bilde nedenfor for å laste ned hele bildet.</div>
         <div class='row'>
           <div class='col-xs-3'>
             <a href='resources//map-area-marks.png'><img class='img-responsive myimg' src='resources/map-area-marks.png'></img></a>
@@ -104,13 +89,10 @@
             <a href='resources/profil.jpg'><img class='img-responsive myimg' src='resources/profil.jpg'></img></a>
           </div>
           <div class='col-xs-3'>
-            <a href='resources/ute-sommer.jpg'><img class='img-responsive myimg' src='resources/ute-sommer.jpg'></img></a>
+            <a href='resources/skogsglimpse.jpg'><img class='img-responsive myimg' src='resources/skogsglimpse.jpg'></img></a>
           </div>
         </div>
         <div class='row top7'>
-          <div class='col-xs-3'>
-            <a href='resources/skogsglimpse.jpg'><img class='img-responsive myimg' src='resources/skogsglimpse.jpg'></img></a>
-          </div>
           <div class='col-xs-3'>
             <a href='resources/soverom.jpg'><img class='img-responsive myimg' src='resources/soverom.jpg'></img></a>
           </div>
@@ -119,6 +101,9 @@
           </div>
           <div class='col-xs-3'>
             <a href='resources/soverom-3.jpg'><img class='img-responsive myimg' src='resources/soverom-3.jpg'></img></a>
+          </div>
+          <div class='col-xs-3'>
+            <a href='resources/stue-2.jpg'><img class='img-responsive myimg' src='resources/stue-2.jpg'></img></a>
           </div>
         </div>
         <div class='row top7'>
@@ -150,9 +135,6 @@
           </div>
         </div>
         <div class='row top7'>
-          <div class='col-xs-3'>
-            <a href='resources/stue-2.jpg'><img class='img-responsive myimg' src='resources/stue-2.jpg'></img></a>
-          </div>
           <div class='col-xs-3'>
             <a href='resources/stue-3.jpg'><img class='img-responsive myimg' src='resources/stue-3.jpg'></img></a>
           </div>
@@ -198,6 +180,21 @@
 
 
         <div class='page-header'>
+          <h2>Kart</h2>
+        </div>
+        <ul>
+          <li><a href="http://www.norgeibilder.no/?zoom=18&lat=7414813.06731&lon=784727.70472&srs=EPSG:32632">Norge
+          i bilder</a></li>
+          <li>
+            <a href='http://kart.finn.no/?lng=15.46442&lat=66.71864&zoom=19&mapType=norhybrid'>Hybrid (Finn.no)</a>
+          </li>
+          <li>
+            <a href="http://kart.finn.no/?lng=15.46420&lat=66.71861&tab=feedback&zoom=19&mapType=normap&activetab=feedback">Rent
+            kart (Finn.no)</a>
+          </li>
+        </ul>
+
+        <div class='page-header'>
           <h2>Referanser</h2>
         </div>
         <ul>
@@ -224,7 +221,7 @@
 
 
       <script src="./js/jquery-1.11.1.js"></script>
-      <script src="./js/bootstrap.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
 
       <script type="text/javascript">
 	$('#showImg').click(function() {
