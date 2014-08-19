@@ -1,0 +1,9 @@
+half-size() {
+  local SOURCE=$1
+  if [ -r "$1" ]; then
+    local DEST=resources/${SOURCE##*/}
+    convert "$SOURCE" -resize 50% "$DEST"
+  else
+    echo "No such file: $SOURCE"
+  fi
+}
