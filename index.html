@@ -53,29 +53,24 @@
 	  vann- og strømtilkobling.
 	</div>
 
-
-
         <div class='page-header'>
           <h2>Bilder</h2>
         </div>
 	<div class="text-center">
           <button type="button" class="btn btn-primary" id="showImg">
-            Se store bilder
+            Se lysbilder
           </button>
           <button type="button" class="hide btn btn-primary" id="hideImg">
-            Fjern store bilder
+            Stopp lysbilder
           </button>
         </div>
-        <div id="karusell" class='row hide mykarusell'>
-          <div class='col-xs-1'>
-            <button type="button" class="btn btn-primary" id="showPrev">Forrige</button>
+        <div id="mycarousel" class="carousel slide hide">
+          <div class="carousel-inner mymax" id='myinner'>
           </div>
-          <div id="storeBilder" class='col-xs-10'></div>
-          <div class='col-xs-1'>
-            <button type="button" class="btn btn-primary" id="showNext">Neste</button>
-          </div>
-          <hr>
+          <a class="carousel-control left muchbigger" href="#mycarousel" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right muchbigger" href="#mycarousel" data-slide="next">&rsaquo;</a>
         </div>
+
         <div style='padding-top:1ex;'>Eller klikk på et bilde nedenfor for å laste ned hele bildet.</div>
         <div class='row'>
           <div class='col-xs-3'>
@@ -227,30 +222,43 @@
 
       <script src="./js/jquery-1.11.1.min.js"></script>
       <script src="./js/bootstrap.min.js"></script>
+      <script src="./js/jquery.mobile.min.js"></script>
 
       <script type="text/javascript">
+
+        $('#test').append('<p>jon1</p>');
+        $('#test').append('<p>jon2</p>');
+
+
+        var images=$('img.myimg').clone();
+
+        var itemClass="'item active'";
+        for (var i=0;i<images.length;i++) {
+          var image = images.get(i);
+          console.log(i + ' ' + image);
+          var im_id='image_' + i;
+          $('#myinner').append("<div id='" + im_id + "' class=" + itemClass + "></div>");
+          $('#'+im_id).html(image);
+          itemClass="'item'";
+        }
+
+        $('.carousel').carousel();
+        $(".carousel").swiperight(function() {
+	  $(this).carousel('prev');
+	});
+        $(".carousel").swipeleft(function() {
+          $(this).carousel('next');
+        });
+
+
 	$('#showImg').click(function() {
-          var images=$('img.myimg').clone();
-          var current=0;
-          $('#storeBilder').html(images.get(0));
+          $("#mycarousel").removeClass('hide');
           $('#showImg').addClass('hide');
           $('#hideImg').removeClass('hide');
-          $('#karusell').removeClass('hide');
-          $('#showNext').click(function() {
-            current++; if (current == images.length) current=0;
-            $('#storeBilder').html(images.get(current));
-          });
-          $('#showPrev').click(function() {
-            if (current == 0) current=images.length;
-            current--;
-            $('#storeBilder').html(images.get(current));
-          });
           $('#hideImg').click(function() {
             $('#hideImg').addClass('hide');
             $('#showImg').removeClass('hide');
-            $('#karusell').addClass('hide');
-            $('#showPrev').off('click');
-            $('#showNext').off('click');
+            $('#mycarousel').addClass('hide');
             $('#hideImg').off('click');
           });
 	});

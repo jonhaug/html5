@@ -35,3 +35,12 @@ div.ingress {
     font-size: 140%;
     color: #072570;
 }
+
+.muchbigger {
+    font-size: 3000%;
+}
+
+div.mymax {
+    text-align: center;
+    max-width: 800px;
+}
