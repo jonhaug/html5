@@ -1,5 +1,5 @@
 
-FILES=index.html css js resources
+FILES=index.html css js resources plakat.html
 REMOTE=jonhaug@login.ifi.uio.no:www_docs/saltfjellet/
 
 
