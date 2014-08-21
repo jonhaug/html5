@@ -1,21 +1,7 @@
 
-.annonse {
-    background-color: yellow;
-}
-
 body {
-    padding-top: 50px;
-    font-size: 150%;
-}
-
-.myheader {
-    padding: 40px 15px;
-    text-align: center;
-}
-
-
-img {
-//    max-width: 50%;
+//    padding-top: 50px;
+//    font-size: 150%;
 }
 
 
@@ -23,13 +9,9 @@ img {
 
 .row { margin-top:7px; }
 
-.goright {
-    text-align:right;
-}
-
 .mykarusell {
-/*    border: 1px solid blue; */
   padding-bottom: 1em;
+  text-align: center;
 }
 
 div.ingress {
@@ -43,5 +25,4 @@ div.ingress {
 
 div.mymax {
     text-align: center;
-    max-width: 800px;
 }
