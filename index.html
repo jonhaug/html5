@@ -65,14 +65,14 @@
           <h2>Bilder</h2>
         </div>
 	<div class="text-center mykarusell">
-          <button type="button" class="btn btn-primary btn-lg" id="showImg">
+          <button type="button" class="hide btn btn-primary btn-lg" id="showImg">
             Se lysbilder
           </button>
-          <button type="button" class="hide btn btn-primary btn-lg" id="hideImg">
+          <button type="button" class="btn btn-primary btn-lg" id="hideImg">
             Stopp lysbilder
           </button>
         </div>
-        <div id="mycarousel" class="carousel slide hide mykarusell">
+        <div id="mycarousel" class="carousel slide mykarusell">
           <div class="carousel-inner mymax" id='myinner'>
           </div>
           <a class="carousel-control left muchbigger" href="#mycarousel" data-slide="prev">&lsaquo;</a>
@@ -260,15 +260,17 @@
         });
 
 
-	$('#showImg').click(function() {
-          $("#mycarousel").removeClass('hide');
-          $('#showImg').addClass('hide');
-          $('#hideImg').removeClass('hide');
-          $('#hideImg').click(function() {
-            $('#hideImg').addClass('hide');
-            $('#showImg').removeClass('hide');
-            $('#mycarousel').addClass('hide');
-            $('#hideImg').off('click');
+	$('#hideImg').click(function() {
+          $("#mycarousel").addClass('hide');
+          $('#showImg').removeClass('hide');
+          $('#hideImg').addClass('hide');
+          $(".caousel").carousel('pause');
+          $('#showImg').click(function() {
+            $('#hideImg').removeClass('hide');
+            $('#showImg').addClass('hide');
+            $('#mycarousel').removeClass('hide');
+            $('#showImg').off('click');
+            $(".caousel").carousel();
           });
 	});
       </script>
