@@ -15,7 +15,7 @@ body {
 
 
 img {
-    max-width: 50%;
+//    max-width: 50%;
 }
 
 
@@ -38,7 +38,7 @@ div.ingress {
 }
 
 .muchbigger {
-    font-size: 3000%;
+    font-size: 2000%;
 }
 
 div.mymax {
