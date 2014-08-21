@@ -35,15 +35,23 @@
 
     <body role="document">
 
-      <div class="container" role="main">
-        <div class='jumbotron'>
-        <h1>Hytte på Saltfjellet til salgs</h1>
-        <p>Hytte med selveiet tomt sentralt plassert mellom Lønsdal stasjon og Sørelva selges.</p>
-        <div>
-          <a href='http://kart.finn.no/?lng=15.45930&lat=66.71938&tab=feedback&zoom=12&mapType=normap&markers=15.46516,66.71875,r,Brukerdefinert&activetab=feedback'>
-            <img src='resources/saltfjellet-smaller.jpg' class='img-responsive'></img>
-            <div class='cation'>Klikk på bildet for større kart</div></a></div>
+      <div class='jumbotron'>
+        <div class="container">
+          <h1>Hytte på Saltfjellet til salgs</h1>
+          <p>Hytte med selveiet tomt sentralt plassert mellom Lønsdal stasjon og Sørelva selges.</p>
+          <div class="row well well-lg">
+            <div class='col-md-6'>
+              <a href='http://kart.finn.no/?lng=15.45930&lat=66.71938&tab=feedback&zoom=12&mapType=normap&markers=15.46516,66.71875,r,Brukerdefinert&activetab=feedback'>
+                <img src='resources/saltfjellet-smaller.jpg' class='img-responsive'></img>
+                <div class='caption'>Klikk på bildet for større kart</div></a></div>
+            <div class="lead col-md-6">
+              <h3>Prisantydning: kr 800.000,-</h3>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="container">
 
 	<div class="lead">
 	  Lun og trivelig hytte, selveier på selveid tomt, på Saltfjellet, 13 mil fra Bodø og 10 mil fra Mo i Rana. Ligger i et
@@ -53,95 +61,90 @@
 	  vann- og strømtilkobling.
 	</div>
 
-
-
         <div class='page-header'>
           <h2>Bilder</h2>
         </div>
-	<div class="text-center">
-          <button type="button" class="btn btn-primary" id="showImg">
-            Se store bilder
+	<div class="text-center mykarusell">
+          <button type="button" class="hide btn btn-primary btn-lg" id="showImg">
+            Se lysbilder
           </button>
-          <button type="button" class="hide btn btn-primary" id="hideImg">
-            Fjern store bilder
+          <button type="button" class="btn btn-primary btn-lg" id="hideImg">
+            Stopp lysbilder
           </button>
         </div>
-        <div id="karusell" class='row hide mykarusell'>
-          <div class='col-xs-1'>
-            <button type="button" class="btn btn-primary" id="showPrev">Forrige</button>
+        <div id="mycarousel" class="carousel slide mykarusell">
+          <div class="carousel-inner mymax" id='myinner'>
           </div>
-          <div id="storeBilder" class='col-xs-10'></div>
-          <div class='col-xs-1'>
-            <button type="button" class="btn btn-primary" id="showNext">Neste</button>
-          </div>
-          <hr>
+          <a class="carousel-control left muchbigger" href="#mycarousel" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right muchbigger" href="#mycarousel" data-slide="next">&rsaquo;</a>
         </div>
+
         <div style='padding-top:1ex;'>Eller klikk på et bilde nedenfor for å laste ned hele bildet.</div>
         <div class='row'>
           <div class='col-xs-3'>
-            <a href='resources//map-area-marks.jpg'><img class='img-responsive myimg' src='resources/map-area-marks.jpg'></img></a>
+            <a href='resources//map-area-marks.jpg' target="_blank"><img class='img-responsive myimg' src='resources/map-area-marks.jpg'></img></a>
           </div>
           <div class='col-xs-3'>
-            <a href='resources/floor-plan.png'>
+            <a target="_blank" href='resources/floor-plan.png'>
 	      <img class='img-responsive myimg'
                    src='resources/floor-plan.png' alt="Plantegning, ikke helt nøyaktig."></img>
 	    </a>
           </div>
           <div class='col-xs-3'>
-            <a href='resources/profil-50.jpg'><img class='img-responsive myimg' src='resources/profil-50.jpg'></img></a>
+            <a target="_blank" href='resources/profil-50.jpg'><img class='img-responsive myimg' src='resources/profil-50.jpg'></img></a>
           </div>
           <div class='col-xs-3'>
-            <a href='resources/skogsglimpse-50.jpg'><img class='img-responsive myimg' src='resources/skogsglimpse-50.jpg'></img></a>
-          </div>
-        </div>
-        <div class='row top7'>
-          <div class='col-xs-3'>
-            <a href='resources/soverom.jpg'><img class='img-responsive myimg' src='resources/soverom.jpg'></img></a>
-          </div>
-          <div class='col-xs-3'>
-            <a href='resources/soverom-2.jpg'><img class='img-responsive myimg' src='resources/soverom-2.jpg'></img></a>
-          </div>
-          <div class='col-xs-3'>
-            <a href='resources/soverom-3.jpg'><img class='img-responsive myimg' src='resources/soverom-3.jpg'></img></a>
-          </div>
-          <div class='col-xs-3'>
-            <a href='resources/stue-2.jpg'><img class='img-responsive myimg' src='resources/stue-2.jpg'></img></a>
+            <a target="_blank" href='resources/skogsglimpse-50.jpg'><img class='img-responsive myimg' src='resources/skogsglimpse-50.jpg'></img></a>
           </div>
         </div>
         <div class='row top7'>
           <div class='col-xs-3'>
-            <a href='resources/utedo.jpg'><img class='img-responsive myimg' src='resources/utedo.jpg'></img></a>
+            <a target="_blank" href='resources/soverom.jpg'><img class='img-responsive myimg' src='resources/soverom.jpg'></img></a>
           </div>
           <div class='col-xs-3'>
-            <a href='resources/utedo-inne.jpg'><img class='img-responsive myimg' src='resources/utedo-inne.jpg'></img></a>
+            <a target="_blank" href='resources/soverom-2.jpg'><img class='img-responsive myimg' src='resources/soverom-2.jpg'></img></a>
           </div>
           <div class='col-xs-3'>
-            <a href='resources/solcelle-ute.jpg'><img class='img-responsive myimg' src='resources/solcelle-ute.jpg'></img></a>
+            <a target="_blank" href='resources/soverom-3.jpg'><img class='img-responsive myimg' src='resources/soverom-3.jpg'></img></a>
           </div>
           <div class='col-xs-3'>
-            <a href='resources/dypenfjell.jpg'><img class='img-responsive myimg' src='resources/dypenfjell.jpg'></img></a>
-          </div>
-        </div>
-        <div class='row top7'>
-          <div class='col-xs-3'>
-            <a href='resources/kjokken.jpg'><img class='img-responsive myimg' src='resources/kjokken.jpg'></img></a>
-          </div>
-          <div class='col-xs-3'>
-            <a href='resources/kjokken-2.jpg'><img class='img-responsive myimg' src='resources/kjokken-2.jpg'></img></a>
-          </div>
-          <div class='col-xs-3'>
-            <a href='resources/spiseplass.jpg'><img class='img-responsive myimg' src='resources/spiseplass.jpg'></img></a>
-          </div>
-          <div class='col-xs-3'>
-            <a href='resources/stue.jpg'><img class='img-responsive myimg' src='resources/stue.jpg'></img></a>
+            <a target="_blank" href='resources/stue-2.jpg'><img class='img-responsive myimg' src='resources/stue-2.jpg'></img></a>
           </div>
         </div>
         <div class='row top7'>
           <div class='col-xs-3'>
-            <a href='resources/stue-3.jpg'><img class='img-responsive myimg' src='resources/stue-3.jpg'></img></a>
+            <a target="_blank" href='resources/utedo.jpg'><img class='img-responsive myimg' src='resources/utedo.jpg'></img></a>
           </div>
           <div class='col-xs-3'>
-            <a href='resources/bad-vask.jpg'><img class='img-responsive myimg' src='resources/bad-vask.jpg' alt='Baderom med vask'></img></a>
+            <a target="_blank" href='resources/utedo-inne.jpg'><img class='img-responsive myimg' src='resources/utedo-inne.jpg'></img></a>
+          </div>
+          <div class='col-xs-3'>
+            <a target="_blank" href='resources/solcelle-ute.jpg'><img class='img-responsive myimg' src='resources/solcelle-ute.jpg'></img></a>
+          </div>
+          <div class='col-xs-3'>
+            <a target="_blank" href='resources/dypenfjell.jpg'><img class='img-responsive myimg' src='resources/dypenfjell.jpg'></img></a>
+          </div>
+        </div>
+        <div class='row top7'>
+          <div class='col-xs-3'>
+            <a target="_blank" href='resources/kjokken.jpg'><img class='img-responsive myimg' src='resources/kjokken.jpg'></img></a>
+          </div>
+          <div class='col-xs-3'>
+            <a target="_blank" href='resources/kjokken-2.jpg'><img class='img-responsive myimg' src='resources/kjokken-2.jpg'></img></a>
+          </div>
+          <div class='col-xs-3'>
+            <a target="_blank" href='resources/spiseplass.jpg'><img class='img-responsive myimg' src='resources/spiseplass.jpg'></img></a>
+          </div>
+          <div class='col-xs-3'>
+            <a target="_blank" href='resources/stue.jpg'><img class='img-responsive myimg' src='resources/stue.jpg'></img></a>
+          </div>
+        </div>
+        <div class='row top7'>
+          <div class='col-xs-3'>
+            <a target="_blank" href='resources/stue-3.jpg'><img class='img-responsive myimg' src='resources/stue-3.jpg'></img></a>
+          </div>
+          <div class='col-xs-3'>
+            <a target="_blank" href='resources/bad-vask.jpg'><img class='img-responsive myimg' src='resources/bad-vask.jpg' alt='Baderom med vask'></img></a>
           </div>
         </div>
 
@@ -159,6 +162,7 @@
           <dt>Hjemmelshaver</dt><dd>Marie Haugsand, Bodø. (Fra 1962.)</dd>
           <dt>Byggeår</dt><dd>Ca 1960, påbygd i flere omganger.</dd>
           <dt>Bruksareal/P-rom</dt>
+          <dt>Takst</dt><dd>kr 750.000,- (i 2010)</dd>
           <dd>60 kvm</dd>
           <dt>Bruttoareal</dt><dd>80 kvm</dd>
           <dt>Tomt</dt><dd>996 kvm eiet tomt.</dd>
@@ -188,13 +192,13 @@
           <h2>Kart</h2>
         </div>
         <ul>
-          <li><a href="http://www.norgeibilder.no/?zoom=18&lat=7414813.06731&lon=784727.70472&srs=EPSG:32632">Norge
+          <li><a target="_blank" href="http://www.norgeibilder.no/?zoom=18&lat=7414813.06731&lon=784727.70472&srs=EPSG:32632">Norge
           i bilder</a></li>
           <li>
-            <a href='http://kart.finn.no/?lng=15.46442&lat=66.71864&zoom=19&mapType=norhybrid'>Hybrid (Finn.no)</a>
+            <a target="_blank" href='http://kart.finn.no/?lng=15.46442&lat=66.71864&zoom=19&mapType=norhybrid'>Hybrid (Finn.no)</a>
           </li>
           <li>
-            <a href="http://kart.finn.no/?lng=15.46420&lat=66.71861&tab=feedback&zoom=19&mapType=normap&activetab=feedback">Rent
+            <a target="_blank" href="http://kart.finn.no/?lng=15.46420&lat=66.71861&tab=feedback&zoom=19&mapType=normap&activetab=feedback">Rent
             kart (Finn.no)</a>
           </li>
         </ul>
@@ -203,20 +207,20 @@
           <h2>Referanser</h2>
         </div>
         <ul>
-          <li><a href='http://www.seeiendom.no/services/Matrikkel.svc/GetDetailPage?type=property&knr=1840&gnr=76&bnr=25&fnr=0&snr=0&showpwm=true&customer=kartverket&pagename='>Matrikkel
+          <li><a target="_blank" href='http://www.seeiendom.no/services/Matrikkel.svc/GetDetailPage?type=property&knr=1840&gnr=76&bnr=25&fnr=0&snr=0&showpwm=true&customer=kartverket&pagename='>Matrikkel
           76/25</a></li>
-          <li>Skriv <emph>76/25 Saltdal</emph> i søkefeltet til <a href="http://www.seeiendom.no">Kartverk/grunnboken</a>.</li>
-          <li><a href="resources/old-fact-50.jpg">Tidligere takstdokument</a></li>
-          <li><a href="resources/statskog-50.jpg">Dokument fra Statskog</a></li>
-          <li><a href="resources/egenerklering-50.jpg">Egenerklæring</a></li>
+          <li>Skriv <emph>76/25 Saltdal</emph> i søkefeltet til <a target="_blank" href="http://www.seeiendom.no">Kartverk/grunnboken</a>.</li>
+          <li><a target="_blank" href="resources/old-fact-50.jpg">Tidligere takstdokument</a></li>
+          <li><a target="_blank" href="resources/statskog-50.jpg">Dokument fra Statskog</a></li>
+          <li><a target="_blank" href="resources/egenerklering-50.jpg">Egenerklæring</a></li>
         </ul>
 
         <div class='page-header'>
           <h2>Kontakt</h2>
         </div>
         <ul>
-          <li>URL: <a href='http://haugsand.no/saltfjellet/hytte.html'>http://haugsand.no/saltfjellet/hytte.html</a></li>
-      <li>Bjørn Haugsand, e-post: <a href='mailto:bjorn.haugsand@gmail.com'>bjorn.haugsand@gmail.com</a></li>
+          <li>URL: <a href='http://haugsand.no/saltfjellet/hytte.html'>http://haugsand.no/saltfjellet/</a></li>
+      <li>Bjørn Haugsand, e-post: <a href='mailto:bjorn.haugsand@gmail.com'>bjorn.haugsand@gmail.com</a>, tlf: +4797684338</li>
       <li>Jon Haugsand, e-post: <a href='mailto:jon.haugsand@gmail.com'>jon.haugsand@gmail.com</a>, tlf: +4745003994</li>
         </ul>
 
@@ -227,31 +231,46 @@
 
       <script src="./js/jquery-1.11.1.min.js"></script>
       <script src="./js/bootstrap.min.js"></script>
+      <script src="./js/jquery.mobile.min.js"></script>
 
       <script type="text/javascript">
-	$('#showImg').click(function() {
-          var images=$('img.myimg').clone();
-          var current=0;
-          $('#storeBilder').html(images.get(0));
-          $('#showImg').addClass('hide');
-          $('#hideImg').removeClass('hide');
-          $('#karusell').removeClass('hide');
-          $('#showNext').click(function() {
-            current++; if (current == images.length) current=0;
-            $('#storeBilder').html(images.get(current));
-          });
-          $('#showPrev').click(function() {
-            if (current == 0) current=images.length;
-            current--;
-            $('#storeBilder').html(images.get(current));
-          });
-          $('#hideImg').click(function() {
-            $('#hideImg').addClass('hide');
-            $('#showImg').removeClass('hide');
-            $('#karusell').addClass('hide');
-            $('#showPrev').off('click');
-            $('#showNext').off('click');
-            $('#hideImg').off('click');
+
+        $('#test').append('<p>jon1</p>');
+        $('#test').append('<p>jon2</p>');
+
+
+        var images=$('img.myimg').clone();
+
+        var itemClass="'item active'";
+        for (var i=0;i<images.length;i++) {
+          var image = images.get(i);
+          console.log(i + ' ' + image);
+          var im_id='image_' + i;
+          $('#myinner').append("<div id='" + im_id + "' class=" + itemClass + "></div>");
+          $('#'+im_id).html(image);
+          itemClass="'item'";
+        }
+
+        $('.carousel').carousel();
+        $(".carousel").swiperight(function() {
+	  $(this).carousel('prev');
+	});
+        $(".carousel").swipeleft(function() {
+          $(this).carousel('next');
+        });
+
+
+	$('#hideImg').click(function() {
+          $("#mycarousel").addClass('hide');
+          $('#showImg').removeClass('hide');
+          $('#hideImg').addClass('hide');
+          $(".caousel").carousel('pause');
+          $('#showImg').click(function() {
+            $('#hideImg').removeClass('hide');
+            $('#showImg').addClass('hide');
+            $('#mycarousel').removeClass('hide');
+            $('#showImg').off('click');
+            $(".caousel").carousel();
           });
 	});
       </script>
